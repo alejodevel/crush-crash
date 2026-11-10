@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>SIN FILTRO — Crush or Crash + El Mazo</title>
+  <meta name="description" content="Dos juegos para parejas y amigos: Crush or Crash (¿cuánto me conoces?) y El Mazo (verdad, reto y confesión).">
+  <meta name="theme-color" content="#0b0b0f">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/jost-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-view="home">
+  <div class="blobs" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <div class="app">
+    <header class="top">
+      <a href="#/" class="brand" aria-label="Sin Filtro — inicio">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#d8ff3a"/><path d="M18.5 5 8 18.5h7L13.5 27 24 13.5h-7z" fill="#0b0b0f"/></svg>
+        <span>SIN FILTRO</span>
+      </a>
+      <span class="age">+18</span>
+    </header>
+
+    <main>
+      <!-- INICIO -->
+      <section id="view-home" class="view">
+        <div class="home">
+          <div class="hero-copy">
+            <p class="kicker">Dos juegos · Un celular · Cero vergüenza</p>
+            <h1 class="hero-title"><span>SIN</span> <b>FILTRO</b></h1>
+          </div>
+
+          <div class="tiles">
+            <a class="tile t1" href="#/crush">
+              <div class="tile-art" data-art="crush" aria-hidden="true"></div>
+              <div class="tile-body">
+                <span class="tag">Parejas · Amigos</span>
+                <h2>CRUSH<br><b>OR CRASH</b></h2>
+                <p>Responde sobre ti, manda el link y descubre qué tanto te conocen. De “love of my life” a “we need to talk”.</p>
+                <span class="btn" data-i="arrow">JUGAR</span>
+              </div>
+            </a>
+            <a class="tile t2" href="#/mazo">
+              <div class="tile-art" data-art="mazo" aria-hidden="true"></div>
+              <div class="tile-body">
+                <span class="tag">En persona · 2–8</span>
+                <h2>EL<br><b>MAZO</b></h2>
+                <p>Verdad, reto y confesión. Tres mazos, tres intensidades y nadie se escapa de su carta.</p>
+                <span class="btn" data-i="arrow">REPARTIR</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="marquee" aria-hidden="true"><div class="track" id="track"></div></div>
+        </div>
+      </section>
+
+      <!-- CRUSH OR CRASH -->
+      <section id="view-crush" class="view"><div id="g1" class="stage"></div></section>
+
+      <!-- EL MAZO -->
+      <section id="view-mazo" class="view"><div id="g2" class="stage"></div></section>
+    </main>
+  </div>
+
+  <div id="deal" class="deal" hidden></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="art.js"></script>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
